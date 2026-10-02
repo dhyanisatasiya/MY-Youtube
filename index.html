@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Header</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYjWrVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+        /* ================= VIDEO CARD ================= */
+
+        .video {
+            transition: 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .video:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        .video video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .video:hover video {
+            transform: scale(1.03);
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .search-box {
+            width: 45%;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .navbar .container-fluid {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .search-box {
+                order: 3;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .navbar-brand b {
+                font-size: 19px !important;
+            }
+
+            .navbar-brand i {
+                font-size: 28px !important;
+            }
+
+            .create-btn {
+                font-size: 14px;
+            }
+
+            .create-btn span {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .navbar-brand b {
+                display: none;
+            }
+
+            .navbar-brand i {
+                font-size: 30px !important;
+            }
+
+            .create-btn {
+                padding: 8px 10px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ===================== YouTube Header ===================== -->
+
+    <nav class="navbar bg-white border-bottom">
+
+        <div class="container-fluid">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="d-flex align-items-center">
+
+                <!-- YouTube Logo -->
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+
+                    <i class="fa-brands fa-youtube" style="color:red; font-size:32px; margin-right:5px;">
+                    </i>
+
+                    <b style="font-size:22px; color:#111;">
+                        YouTube
+                    </b>
+
+                </a>
+
+            </div>
+
+
+            <!-- SEARCH SECTION -->
+
+            <div class="d-flex align-items-center mx-auto search-box">
+
+
+                <div class="input-group">
+
+
+                    <!-- Search Input -->
+
+                    <input type="search" class="form-control" placeholder="Search" style="border-radius:25px 0 0 25px;">
+
+
+                    <!-- Search Button -->
+
+                    <button class="btn btn-light border" style="border-radius:0 25px 25px 0;">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- Microphone -->
+
+                <button class="btn btn-light rounded-circle ms-2">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="d-flex align-items-center gap-2">
+
+
+                <!-- Create -->
+
+                <button class="btn btn-light create-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Create</span>
+
+                </button>
+
+
+                <!-- Notification -->
+
+                <button class="btn btn-light rounded-circle">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <button class="btn btn-primary rounded-circle" style="width:40px; height:40px;">
+
+                    D
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+    <!-- ===================== VIDEO SECTION ===================== -->
+
+    <div class="container mt-4">
+
+        <div class="row g-4">
+
+
+            <!-- ================= CARD 1 ================= -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/1_temperature.webm" controls poster="./image/1.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Temperature Converter:
+                        </h5>
+
+                        <p class="card-text">
+                            Learn how to write a program to convert
+                            temperature from degrees Celsius to Fahrenheit.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CARD 2 ================= -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/1_temperature.webm" controls poster="./image/2.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Gross Salary Calculator
+                        </h5>
+
+                        <p class="card-text">
+                            Gross Salary Calculator: Understand how to calculate an employee's gross salary by adding
+                            HRA, DA, and TA percentages to the base salary.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CARD 3 ================= -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/1_temperature.webm" controls poster="./image/3.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Triangle Angle Finder
+                        </h5>
+
+                        <p class="card-text">
+                            Triangle Angle Finder: Discover how to write a program to find the third angle of a triangle
+                            when two angles are given.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 4====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/4_teranry.webm" controls poster="./image/4.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            imple Grade Calculator
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to write a program that calculates grades from A to F using a ternary operator
+                            based on user input.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 5====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="./image/5.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Additional
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to extend the program using a switch-case statement to print additional
+                            comments based on the grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 6====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/6_if_else.webm" controls poster="./image/6.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--==============CARD 7====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/7_atoz.webm" controls poster="./image/7.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Alphabet Skipper
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to write a program that prints all alphabets from 'a' to 'z' by skipping 3
+                            alphabets using a do-while loop.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--==============CARD 8====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/8_counter.webm" controls poster="./image/8.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Digit Counter
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to write a program to count the total number of digits in a number using a
+                            while loop.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 9====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/9_add.webm" controls poster="./image/9.png">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            First & Last Digit Sum
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to write a program to find the sum of a number's first and last digits using C
+                            programming.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 10====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/10_ptn1.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 11====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 12====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--==============CARD 13====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--==============CARD 14====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 15====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==============CARD 16====================-->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card border-0 video">
+
+                    <video src="./video/5_swatch-case.webm" controls poster="">
+                    </video>
+
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Eligibility Check (if-else Statement)
+                        </h5>
+
+                        <p class="card-text">
+                            Discover how to use an if-else statement to check level eligibility based on the student's
+                            grade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
