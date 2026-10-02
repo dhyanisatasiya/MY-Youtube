@@ -28,16 +28,24 @@
     <style>
         /* ================= VIDEO CARD ================= */
 
-        .video {
-            transition: 0.3s;
+.video {
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
             overflow: hidden;
-            border-radius: 15px;
+            border-radius: 12px;
+            background: transparent;
+            padding: 8px;
         }
 
         .video:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px #ccc;
+            background-color: #0f172a;
+            transform: scale(1.02);
+            color: #ffffff;
+        }
+
+        .video:hover .card-title,
+        .video:hover .card-text {
+            color: #ffffff !important;
         }
 
         .video video {
@@ -45,14 +53,8 @@
             aspect-ratio: 16 / 9;
             object-fit: cover;
             display: block;
-            transition: 0.3s;
+            border-radius: 10px;
         }
-
-        .video:hover video {
-            transform: scale(1.03);
-        }
-
-
         /* ================= NAVBAR ================= */
 
         .search-box {
